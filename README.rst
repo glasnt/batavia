@@ -8,7 +8,7 @@ Tools to run Python bytecode in the browser.
 
 This is experimental code. If it breaks, you get to keep all the shiny pieces.
 
-What it does:
+What it does: 
 
 * Implements a Python 3.4 Bytecode machine that can handle function calls
   and basic class definitions.
