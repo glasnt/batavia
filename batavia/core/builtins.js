@@ -1156,9 +1156,14 @@ batavia.builtins.type = function(args, kwargs) {
 };
 batavia.builtins.type.__doc__ = "type(object_or_name, bases, dict)\ntype(object) -> the object's type\ntype(name, bases, dict) -> a new type";
 
-batavia.builtins.vars = function() {
-    throw new batavia.builtins.NotImplementedError("Builtin Batavia function 'vars' not implemented");
+batavia.builtins.vars = function(args, kwargs) {
+    if (args.length == 0) { 
+        return batavia.locals(args, kwargs)
+    } else {
+        return args[0].__dict__
+    }
 };
+batavia.builtins.vars.__doc__ = "vars([object]) -> dictionary\n\nWithout arguments, equivalent to locals().\nWith an argument, equivalent to object.__dict__.";
 
 batavia.builtins.zip = function(args, undefined) {
     if (args === undefined) {
