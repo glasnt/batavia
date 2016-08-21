@@ -1158,7 +1158,7 @@ batavia.builtins.type.__doc__ = "type(object_or_name, bases, dict)\ntype(object)
 
 batavia.builtins.vars = function(args, kwargs) {
     if (args.length == 0) { 
-        return batavia.locals(args, kwargs)
+        return batavia.builtins.locals()
     } else {
         return args[0].__dict__
     }
