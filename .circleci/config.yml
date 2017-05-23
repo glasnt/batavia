@@ -13,6 +13,8 @@ jobs:
       - run: 
           name: "PyTest"
           command: "pip install pytest" # git+https://github.com/pybee/pytest-circleci"
+
+      - checkout
         
       - run: 
           name: "Tests"
