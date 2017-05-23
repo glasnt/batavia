@@ -17,9 +17,9 @@ jobs:
 
       - checkout
     
-      - run:
-          name: "setup"
-          command: "npm install -g npm && npm install"      
+#      - run:
+#          name: "setup"
+#          command: "npm install -g npm && npm install"      
   
       - run: 
           name: "test"
