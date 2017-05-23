@@ -7,10 +7,6 @@ jobs:
         environment:
             TZ: "Australia/Perth"
     steps:
-     # - run: 
-     #     name: "prereq"
-     #     command: "apt-get install git"
-
       - checkout
     
       - run: 
