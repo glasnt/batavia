@@ -10,9 +10,6 @@ jobs:
      # - run: 
      #     name: "prereq"
      #     command: "apt-get install git"
-     # - run: 
-     #     name: "PyTest"
-     #     command: "pip install pytest" # git+https://github.com/pybee/pytest-circleci"
 
       - checkout
     
@@ -26,10 +23,13 @@ jobs:
       #- run:
       #    name: "setup"
       #    command: "apt-get install python-pip && pip install -U pip setuptools"
+      - run: 
+          name: "PyTest"
+          command: "pip install pytest git+https://github.com/pybee/pytest-circleci"
   
       - run: 
           name: "test"
-          command: "python setup.py test --failfast" #py.test tests"
+          command: "py.test tests"
 
       - run: 
           name: "eslint"
