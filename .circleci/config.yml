@@ -11,7 +11,7 @@ jobs:
     
       - run: 
           name: "node"
-          command: "curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash - && sudo apt-get install -y nodejs"
+          command: "curl -sL https://deb.nodesource.com/setup_6.x && apt-get install -y nodejs"
 
       - run:
           name: "npm"
