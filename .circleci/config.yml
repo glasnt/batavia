@@ -7,9 +7,12 @@ jobs:
         environment:
             TZ: "Australia/Perth"
     steps:
+     # - run: 
+     #     name: "prereq"
+     #     command: "apt-get install git"
       - run: 
           name: "PyTest"
-          command: "pip install pytest git+https://github.com/pybee/pytest-circleci"
+          command: "pip install pytest" # git+https://github.com/pybee/pytest-circleci"
         
       - run: 
           name: "Tests"
