@@ -9,7 +9,7 @@ jobs:
     steps:
       - run:
           name: "npm"
-          command: "npm install -g npm && npm install"
+          command: "apt-get install nodejs && npm install -g npm && npm install"
 
       - run: 
           name: "PyTest"
