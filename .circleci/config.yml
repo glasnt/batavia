@@ -19,7 +19,7 @@ jobs:
         
       - run: 
           name: "Tests"
-          command: "py.test tests"
+          command: "python setup.py test" #py.test tests"
 
       - run: 
           name: "Linting"
