@@ -15,9 +15,8 @@ jobs:
 
       - run:
           name: "npm"
-          command: "npm install -g npm && rm node_modules/ -rf && npm install"
+          command: "npm install -g npm && npm install && npm run prepare && npm run build"
  
-
       - run:
           name: "test content"
           command: "ls -la batavia/stdlib" 
