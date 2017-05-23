@@ -19,7 +19,7 @@ jobs:
     
       - run:
           name: "setup"
-          command: "pip install -U pip setuptools"
+          command: "sudo apt-get install python-pip && pip install -U pip setuptools"
   
       - run: 
           name: "test"
