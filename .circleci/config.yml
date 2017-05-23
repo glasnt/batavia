@@ -11,16 +11,20 @@ jobs:
      # - run: 
      #     name: "prereq"
      #     command: "apt-get install git"
-      - run: 
-          name: "PyTest"
-          command: "pip install pytest" # git+https://github.com/pybee/pytest-circleci"
+     # - run: 
+     #     name: "PyTest"
+     #     command: "pip install pytest" # git+https://github.com/pybee/pytest-circleci"
 
       - checkout
-        
+    
+      - run:
+          name: "setup"
+          command: "npm install -g npm && npm install"      
+  
       - run: 
-          name: "Tests"
+          name: "test"
           command: "python setup.py test" #py.test tests"
 
       - run: 
-          name: "Linting"
+          name: "eslint"
           command: "node_modules/.bin/eslint batavia"
