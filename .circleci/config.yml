@@ -4,7 +4,7 @@ jobs:
     working_directory: /tmp/batavia
     docker:
       - image: circleci/node:4.8.2
-      - image: python:3.4.4
+      - image: python:3.4
         environment:
             TZ: "Australia/Perth"
     steps:
@@ -19,7 +19,7 @@ jobs:
     
       - run:
           name: "setup"
-          command: "sudo apt-get install python-pip && pip install -U pip setuptools"
+          command: "apt-get install python-pip && pip install -U pip setuptools"
   
       - run: 
           name: "test"
