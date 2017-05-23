@@ -3,14 +3,10 @@ jobs:
   build:
     working_directory: /root/batavia/
     docker:
-      - image: python:3.4.6-slim
+      - image: beevelop/nodejs-python
         environment:
             TZ: "Australia/Perth"
     steps:
-      - run:
-          name: "npm"
-          command: "apt-get install nodejs && npm install -g npm && npm install"
-
       - run: 
           name: "PyTest"
           command: "pip install pytest git+https://github.com/pybee/pytest-circleci"
